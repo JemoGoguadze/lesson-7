@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title{
+    /* width: 150px;
+    position: absolute;
+    top: 150px;
+    left: 150px; */
+    color: orangered;
+    text-align: center;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: linear;
+    transition: all 0.5s linear 0.5s;
+    }
+/* .image-content{
+    width: 100%;
+}
+.wrapper {
+    max-width: 1066px;
+    width: 100%;
+    margin: 10px auto;
+    position: relative;
+} */
+.wrapper {
+    background-image: url(../pictures/coding.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    padding: 150px 0 0;
+    transition: all 0.5s linear 0.5s;
+}
+.title:hover{
+    color: forestgreen;
+    border-bottom: 3px dotted red;
+}
+.wrapper:hover{
+    background-repeat: repeat;
+    background-size: contain;
+}
+.wrapper:hover .title{
+    font-size: 60px;
+}
+.animation-wrapper{
+    height: 700px;
+    position: relative;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    /* background-color: pink; */
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    border-radius: 20px;
+    z-index: 10;
+    animation-name: mybox;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+.box1{
+    width: 150px;
+    height: 150px;
+    /* background-color: pink; */
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 20px;
+    z-index: 10;
+    animation-name: mysecondbox;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+@keyframes mybox {
+    0% {
+        top: 50px;
+        left: 50px;
+        background-color: fuchsia;
+        /* transform: rotate(90deg); */
+        border-radius: 20px;
+    }
+    50%{
+        top: 150px;
+        left: 150px;
+        background-color: forestgreen;
+        border-radius: 50px;
+    }
+    100%{
+        top: 350px;
+        left: 700px;
+        background-color: peru;
+        border-radius: 100px;
+    }
+}
+@keyframes mysecondbox {
+    0% {
+        bottom: 50px;
+        right: 50px;
+        background-color: fuchsia;
+    }
+    50%{
+        bottom: 150px;
+        right: 150px;
+        transform: rotate(90deg);
+        background-color: forestgreen;
+    }
+    100%{
+        bottom: 350px;
+        right: 700px;
+        transform: rotate(30deg);
+        background-color: peru;
+        transform: rotate(45deg) scale(1.5) skew(50deg);
+}
